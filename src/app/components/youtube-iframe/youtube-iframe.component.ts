@@ -13,7 +13,6 @@ export class YoutubeIframeComponent implements OnInit {
   constructor(
     private _sanitizer: DomSanitizer
   ) {
-    this.videoUrl = "https://www.youtube.com/watch?v=CnblWSUFl28";
   }
 
   ngOnInit() {
