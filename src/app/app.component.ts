@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  videoUrl = "https://www.youtube.com/watch?v=CnblWSUFl28";
   title = 'angular-tests';
 }

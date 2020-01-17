@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from "@angular/platform-browser";
 
 @Component({
@@ -8,7 +8,7 @@ import { DomSanitizer, SafeResourceUrl } from "@angular/platform-browser";
 })
 export class YoutubeIframeComponent implements OnInit {
 
-  public videoUrl: string;
+  @Input() videoUrl: string;
 
   constructor(
     private _sanitizer: DomSanitizer
