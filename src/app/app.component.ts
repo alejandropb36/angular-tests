@@ -8,4 +8,18 @@ import { Component } from '@angular/core';
 export class AppComponent {
   videoUrl = "https://www.youtube.com/watch?v=CnblWSUFl28";
   title = 'angular-tests';
+
+  contador: number;
+
+  constructor() {
+    this.contador = 10;
+  }
+
+  incrementar() {
+    this.contador ++;
+  }
+
+  decrementar() {
+    this.contador --;
+  }
 }
