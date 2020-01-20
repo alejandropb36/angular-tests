@@ -24,22 +24,12 @@ export class HijoComponent implements OnInit {
   }
 
   multiplicar() {
-    // this.contador *= 2;
-    const accion = new MultiplicarAction();
+    const accion = new MultiplicarAction(5);
     this.store.dispatch(accion);
-    // this.cambioContador.emit(this.contador);
   }
 
   dividir() {
-    // this.contador /= 2;
-    // this.cambioContador.emit(this.contador);
-    const accion = new DividirAction();
+    const accion = new DividirAction(5);
     this.store.dispatch(accion);
   }
-
-  resetNieto(event) {
-    this.contador = event;
-    // this.cambioContador.emit(this.contador);
-  }
-
 }
