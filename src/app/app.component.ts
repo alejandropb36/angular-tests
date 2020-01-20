@@ -1,4 +1,10 @@
 import { Component } from '@angular/core';
+import { Store, Action } from '@ngrx/store';
+import { INCREMENTAR, DECREMENTAR, IncrementarAction, DecrementarAction } from "./contador/contador.actions";
+
+interface AppState {
+  contador: number;
+}
 
 @Component({
   selector: 'app-root',
@@ -7,19 +13,23 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   videoUrl = "https://www.youtube.com/watch?v=CnblWSUFl28";
-  title = 'angular-tests';
-
   contador: number;
 
-  constructor() {
-    this.contador = 10;
+  constructor(
+    private store: Store<AppState>
+  ) {
+    this.store.select('contador').subscribe( contador =>  {
+      this.contador = contador;
+    });
   }
 
   incrementar() {
-    this.contador ++;
+    const accion = new IncrementarAction();
+    this.store.dispatch(accion);
   }
 
   decrementar() {
-    this.contador --;
+    const accion = new DecrementarAction();
+    this.store.dispatch(accion);
   }
 }
