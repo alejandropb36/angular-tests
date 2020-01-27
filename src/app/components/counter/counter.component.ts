@@ -20,15 +20,15 @@ export class CounterComponent implements OnInit {
   }
 
   increment() {
-    this.store.dispatch(increment);
+    this.store.dispatch(increment());
   }
 
   decrement() {
-    this.store.dispatch(decrement);
+    this.store.dispatch(decrement());
   }
 
   reset() {
-    this.store.dispatch(reset);
+    this.store.dispatch(reset());
   }
 
 }
