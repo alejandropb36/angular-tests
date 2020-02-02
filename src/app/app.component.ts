@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { Store } from '@ngrx/store';
-import { AppState } from './app.reducer';
+// import { Store } from '@ngrx/store';
+// import { AppState } from './app.reducer';
 
 @Component({
   selector: 'app-root',

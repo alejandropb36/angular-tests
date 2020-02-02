@@ -1,0 +1,9 @@
+<tag-input 
+  [(ngModel)]="emails"
+  [placeholder]="['Emails de Sección']"  
+  [validators]="validators"
+  [errorMessages]="errorMessages"
+  [separatorKeys]="separatorsKeysEmail"
+  (onAdd)="onEmailAdded($event)"
+>
+</tag-input>
